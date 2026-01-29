@@ -1,90 +1,242 @@
- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Dry Night Tracker — private logging, simple charts, gentle reminders, and Apple Health integration." />
   <title>Dry Night Tracker</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #fefeff;
-      color: #222;
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-    header {
-      padding: 2rem 1rem 1rem;
-    }
-    h1 {
-      color: #4a90e2;
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    p {
-      max-width: 600px;
-      margin: 1rem auto;
-      font-size: 1.1rem;
-    }
-    .store-badge {
-      margin: 2rem 0;
-    }
-    .store-badge img {
-      height: 50px;
-    }
-    .section {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid #ddd;
-    }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    a {
-      color: #4a90e2;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
 
-  <header>
-    <h1>Dry Night Tracker</h1>
-    <p>A gentle, private way to track dry nights. Built with care by Cheezy Dibble Studios.</p>
-    <div class="store-badge">
-      <a href="https://apps.apple.com/app/idYOUR_APP_ID">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dry Night Tracker" />
+  <meta property="og:description" content="Track dry nights with simple charts and private logging." />
+  <meta property="og:image" content="assets/og.png" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Dry Night Tracker home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Dry Night Tracker</span>
       </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#support">Support</a>
+      </nav>
+
+      <a class="cta small" href="#download">Download</a>
+      <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile" hidden>
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#support">Support</a>
+      <a class="cta" href="#download">Download</a>
     </div>
   </header>
 
-  <div class="section">
-    <h2>Need Help?</h2>
-    <p>Email our team at <a href="mailto:support@cheezydibblestudios.com">support@cheezydibblestudios.com</a></p>
-  </div>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Track dry nights—calmly and privately.</h1>
+          <p class="sub">
+            Dry Night Tracker is a simple, non-judgmental way to log nights, spot patterns,
+            and see progress over time. Built for iPhone, iPad, and Mac.
+          </p>
 
-    <div class="section">
-    <h2>Check Out Our Other Web App</h2>
-    <p>
-      We also built <strong>Financial Calc</strong> — Get accurate loan calculations with personalized interest rates based on your credit score. Make informed financial decisions with our easy-to-use tools.
-      Learn more at <a href="https://cheezydibblesstudios.com/financial-calc">financial-calc</a>.
-    </p>
-    <div class="store-badge">
-      <a href="http:www.financial-calc.com">
-      </a>
+          <div class="hero-actions" id="download">
+            <!-- Replace # with your App Store link -->
+            <a class="cta" href="#" target="_blank" rel="noopener">View on the App Store</a>
+            <a class="ghost" href="#screenshots">See screenshots</a>
+          </div>
+
+          <ul class="bullets" role="list">
+            <li>Private logging + gentle reminders</li>
+            <li>Clear charts and trends</li>
+            <li>Optional Apple Health integration</li>
+            <li>Face ID / App Lock + iCloud sync</li>
+          </ul>
+        </div>
+
+        <div class="hero-media" aria-label="App preview images">
+          <!-- Replace these with your actual images -->
+          <div class="device">
+            <img src="assets/iphone-hero.png" alt="Dry Night Tracker dashboard on iPhone" loading="eager" />
+          </div>
+          <div class="device secondary">
+            <img src="assets/ipad-hero.png" alt="Dry Night Tracker trends on iPad" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Everything you need—nothing you don’t.</h2>
+          <p>Designed to be reassuring, easy to use, and respectful of sensitive information.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Daily logging</h3>
+            <p>Log results in seconds and keep a clear record over time.</p>
+          </article>
+
+          <article class="card">
+            <h3>Charts & trends</h3>
+            <p>See patterns and progress with simple, readable visualizations.</p>
+          </article>
+
+          <article class="card">
+            <h3>Habits & routines</h3>
+            <p>Track routine factors to better understand what may help.</p>
+          </article>
+
+          <article class="card">
+            <h3>Reminders & milestones</h3>
+            <p>Optional reminders plus celebratory milestones to keep things encouraging.</p>
+          </article>
+
+          <article class="card">
+            <h3>Apple Health (optional)</h3>
+            <p>Connect to Apple Health to keep data consistent across devices.</p>
+          </article>
+
+          <article class="card">
+            <h3>Privacy first</h3>
+            <p>App Lock / Face ID, iCloud sync, and clear controls to keep your data secure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Screenshots</h2>
+          <p>Replace the images below with your App Store-ready screenshots.</p>
+        </div>
+
+        <div class="gallery">
+          <figure>
+            <img src="assets/screen-1.png" alt="Dashboard with streaks and journal" loading="lazy" />
+            <figcaption>Dashboard</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/screen-2.png" alt="Charts and trends view" loading="lazy" />
+            <figcaption>Trends</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/screen-3.png" alt="Apple Health integration settings" loading="lazy" />
+            <figcaption>Apple Health</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/screen-4.png" alt="Notifications and reminders settings" loading="lazy" />
+            <figcaption>Reminders</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/screen-5.png" alt="Privacy and security screen with Face ID and app disguise" loading="lazy" />
+            <figcaption>Privacy</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Privacy</h2>
+          <p>Dry Night Tracker is built to be private and respectful.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Data control</h3>
+            <p>
+              Your entries stay under your control. App Lock / Face ID and iCloud sync
+              are available for convenience and protection.
+            </p>
+            <p class="fine">
+              The app does not provide medical advice, diagnosis, or treatment.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Privacy policy</h3>
+            <p>
+              Read the full privacy policy here:
+              <a href="privacy.html">Privacy Policy</a>
+            </p>
+            <p class="fine">
+              If you use Apple Health, access is optional and controlled by you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Support</h2>
+          <p>Questions, feedback, or help with setup? Reach out any time.</p>
+        </div>
+
+        <div class="support">
+          <div class="panel">
+            <h3>Contact</h3>
+            <p>
+              Email:
+              <a href="mailto:support@cheezydibblestudios.com">support@cheezydibblestudios.com</a>
+            </p>
+            <p class="fine">
+              This email is monitored and used solely for app support and privacy-related inquiries.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Tips</h3>
+            <ul>
+              <li>If Apple Health is enabled, confirm permissions in the Health app.</li>
+              <li>Use reminders to make logging feel effortless.</li>
+              <li>Face ID / App Lock can be enabled in Privacy & Security.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-cta">
+          <!-- Replace # with your App Store link -->
+          <a class="cta" href="#" target="_blank" rel="noopener">Download on the App Store</a>
+          <a class="ghost" href="#top">Back to top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Cheezy Dibble Studios</span>
+      <span class="sep" aria-hidden="true">•</span>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
-  </div>
+  </footer>
 
-  <footer>
-  <p>
-    © 2025 Cheezy Dibble Studio
-    <a href="privacy.html">Privacy Policy</a>
-  </p>
-  <img src="logo-blank.png" alt="Cheezy Dibble Studio Logo" style="margin-top: 1rem; height: 120px; opacity: 0.85;">
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
