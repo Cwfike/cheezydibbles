@@ -7,16 +7,84 @@
   <title>Dry Night Tracker</title>
 
   <link rel="icon" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="canonical" href="https://cheezydibblestudios.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 
+  <meta name="theme-color" content="#0b0d10" />
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Dry Night Tracker" />
   <meta property="og:description" content="Track dry nights with simple charts and private logging." />
-  <meta property="og:image" content="assets/og.png" />
+  <meta property="og:image" content="https://cheezydibblestudios.com/assets/og.jpg" />
+  <meta property="og:url" content="https://cheezydibblestudios.com/" />
   <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dry Night Tracker" />
+  <meta name="twitter:description" content="Track dry nights with simple charts and private logging." />
+  <meta name="twitter:image" content="https://cheezydibblestudios.com/assets/og.jpg" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dry Night Tracker",
+    "operatingSystem": "iOS, iPadOS, macOS",
+    "applicationCategory": "HealthApplication",
+    "description": "Dry Night Tracker is a simple, private way to log nights, spot patterns, and see progress over time, with charts, gentle reminders, and optional Apple Health integration.",
+    "url": "https://cheezydibblestudios.com/",
+    "image": "https://cheezydibblestudios.com/assets/og.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cheezy Dibble Studios",
+      "email": "support@cheezydibblestudios.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is my data really private?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. There's no account to create, your entries are stored on your device, and nothing is sold or shared. The app shows no ads and does no third-party tracking." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it sync across my devices?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Optionally. If you enable iCloud sync, your data is kept consistent across your iPhone, iPad, and Mac through your private iCloud account. You can leave it off to keep everything on a single device." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to use Apple Health?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Apple Health is entirely optional and off until you turn it on. You choose exactly what is shared, and you can revoke access anytime in the Health app." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I keep the app discreet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Face ID / App Lock can require authentication to open the app, and an optional disguised icon keeps it discreet on your home screen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which devices are supported?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dry Night Tracker is built for iPhone, iPad, and Mac." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this medical advice?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The app is a private tracking tool and does not provide medical advice, diagnosis, or treatment. For health concerns, please consult a qualified professional." }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -31,21 +99,11 @@
         <a href="#features">Features</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
         <a href="#support">Support</a>
       </nav>
 
       <a class="cta small" href="#download">Download</a>
-      <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div id="mobileMenu" class="mobile" hidden>
-      <a href="#features">Features</a>
-      <a href="#screenshots">Screenshots</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#support">Support</a>
-      <a class="cta" href="#download">Download</a>
     </div>
   </header>
 
@@ -61,9 +119,26 @@
 
           <div class="hero-actions" id="download">
             <!-- Replace # with your App Store link -->
-            <a class="cta" href="#" target="_blank" rel="noopener">View on the App Store</a>
+            <a class="badge-link" href="#" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" />
+            </a>
             <a class="ghost" href="#screenshots">See screenshots</a>
           </div>
+
+          <ul class="trust" role="list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              No account required
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Data stays on your device
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              No ads, no tracking
+            </li>
+          </ul>
 
           <ul class="bullets" role="list">
             <li>Private logging + gentle reminders</li>
@@ -75,11 +150,11 @@
 
         <div class="hero-media" aria-label="App preview images">
           <!-- Replace these with your actual images -->
-          <div class="device">
-            <img src="assets/iphone-hero.png" alt="Dry Night Tracker dashboard on iPhone" loading="eager" />
+          <div class="tablet">
+            <img class="tablet-screen" src="assets/ipad-hero.png" alt="Dry Night Tracker trends on iPad" loading="lazy" />
           </div>
-          <div class="device secondary">
-            <img src="assets/ipad-hero.png" alt="Dry Night Tracker trends on iPad" loading="lazy" />
+          <div class="phone">
+            <img class="phone-screen" src="assets/iphone-hero.png" alt="Dry Night Tracker dashboard on iPhone" loading="eager" />
           </div>
         </div>
       </div>
@@ -94,31 +169,49 @@
 
         <div class="cards">
           <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 13l2 2 4-4"/></svg>
+            </span>
             <h3>Daily logging</h3>
             <p>Log results in seconds and keep a clear record over time.</p>
           </article>
 
           <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg>
+            </span>
             <h3>Charts & trends</h3>
             <p>See patterns and progress with simple, readable visualizations.</p>
           </article>
 
           <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></svg>
+            </span>
             <h3>Habits & routines</h3>
             <p>Track routine factors to better understand what may help.</p>
           </article>
 
           <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+            </span>
             <h3>Reminders & milestones</h3>
             <p>Optional reminders plus celebratory milestones to keep things encouraging.</p>
           </article>
 
           <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg>
+            </span>
             <h3>Apple Health (optional)</h3>
             <p>Connect to Apple Health to keep data consistent across devices.</p>
           </article>
 
           <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
             <h3>Privacy first</h3>
             <p>App Lock / Face ID, iCloud sync, and clear controls to keep your data secure.</p>
           </article>
@@ -130,28 +223,28 @@
       <div class="container">
         <div class="section-head">
           <h2>Screenshots</h2>
-          <p>Replace the images below with your App Store-ready screenshots.</p>
+          <p>A look at logging, trends, and the privacy controls.</p>
         </div>
 
         <div class="gallery">
           <figure>
-            <img src="assets/screen-1.png" alt="Dashboard with streaks and journal" loading="lazy" />
+            <img src="assets/screen-1.svg" alt="Dashboard with streaks and journal" loading="lazy" />
             <figcaption>Dashboard</figcaption>
           </figure>
           <figure>
-            <img src="assets/screen-2.png" alt="Charts and trends view" loading="lazy" />
+            <img src="assets/screen-2.svg" alt="Charts and trends view" loading="lazy" />
             <figcaption>Trends</figcaption>
           </figure>
           <figure>
-            <img src="assets/screen-3.png" alt="Apple Health integration settings" loading="lazy" />
+            <img src="assets/screen-3.svg" alt="Apple Health integration settings" loading="lazy" />
             <figcaption>Apple Health</figcaption>
           </figure>
           <figure>
-            <img src="assets/screen-4.png" alt="Notifications and reminders settings" loading="lazy" />
+            <img src="assets/screen-4.svg" alt="Notifications and reminders settings" loading="lazy" />
             <figcaption>Reminders</figcaption>
           </figure>
           <figure>
-            <img src="assets/screen-5.png" alt="Privacy and security screen with Face ID and app disguise" loading="lazy" />
+            <img src="assets/screen-5.svg" alt="Privacy and security screen with Face ID and app disguise" loading="lazy" />
             <figcaption>Privacy</figcaption>
           </figure>
         </div>
@@ -191,6 +284,42 @@
       </div>
     </section>
 
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Frequently asked questions</h2>
+          <p>The things people ask most before downloading.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Is my data really private?</summary>
+            <p>Yes. There's no account to create, your entries are stored on your device, and nothing is sold or shared. The app shows no ads and does no third-party tracking.</p>
+          </details>
+          <details>
+            <summary>Does it sync across my devices?</summary>
+            <p>Optionally. If you enable iCloud sync, your data is kept consistent across your iPhone, iPad, and Mac through your private iCloud account. You can leave it off to keep everything on a single device.</p>
+          </details>
+          <details>
+            <summary>Do I have to use Apple Health?</summary>
+            <p>No. Apple Health is entirely optional and off until you turn it on. You choose exactly what is shared, and you can revoke access anytime in the Health app.</p>
+          </details>
+          <details>
+            <summary>Can I keep the app discreet?</summary>
+            <p>Yes. Face ID / App Lock can require authentication to open the app, and an optional disguised icon keeps it discreet on your home screen.</p>
+          </details>
+          <details>
+            <summary>Which devices are supported?</summary>
+            <p>Dry Night Tracker is built for iPhone, iPad, and Mac.</p>
+          </details>
+          <details>
+            <summary>Is this medical advice?</summary>
+            <p>No. The app is a private tracking tool and does not provide medical advice, diagnosis, or treatment. For health concerns, please consult a qualified professional.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section id="support" class="section alt">
       <div class="container">
         <div class="section-head">
@@ -222,7 +351,9 @@
 
         <div class="footer-cta">
           <!-- Replace # with your App Store link -->
-          <a class="cta" href="#" target="_blank" rel="noopener">Download on the App Store</a>
+          <a class="badge-link" href="#" target="_blank" rel="noopener" aria-label="Download on the App Store">
+            <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" />
+          </a>
           <a class="ghost" href="#top">Back to top</a>
         </div>
       </div>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 680" role="img" aria-label="Apple Health screen mockup">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ade80"/><stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <clipPath id="screen3"><rect x="14" y="14" width="292" height="652" rx="40"/></clipPath>
+  </defs>
+  <rect x="6" y="6" width="308" height="668" rx="48" fill="#05070a" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
+  <g clip-path="url(#screen3)">
+    <rect x="14" y="14" width="292" height="652" fill="#0f1318"/>
+    <rect x="120" y="26" width="80" height="22" rx="11" fill="#05070a"/>
+    <g transform="translate(132,72)">
+      <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.10)"/>
+      <path d="M28 42 C18 34 12 28 12 22 C12 17 16 14 20 14 C23 14 26 16 28 19 C30 16 33 14 36 14 C40 14 44 17 44 22 C44 28 38 34 28 42 Z" fill="#fb7185"/>
+    </g>
+    <text x="160" y="158" fill="#eef2f7" font-family="system-ui,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Apple Health</text>
+    <text x="160" y="182" fill="#a9b4c0" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Optional — controlled by you</text>
+    <g transform="translate(32,210)" font-family="system-ui,sans-serif">
+      <rect x="0" y="0" width="256" height="56" rx="14" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.10)"/>
+      <text x="16" y="26" fill="#eef2f7" font-size="14" font-weight="600">Sync with Health</text>
+      <text x="16" y="44" fill="#a9b4c0" font-size="11">Keep data consistent</text>
+      <rect x="206" y="16" width="40" height="24" rx="12" fill="url(#g3)"/>
+      <circle cx="234" cy="28" r="9" fill="#fff"/>
+    </g>
+    <g transform="translate(32,278)" font-family="system-ui,sans-serif">
+      <rect x="0" y="0" width="256" height="56" rx="14" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.10)"/>
+      <text x="16" y="26" fill="#eef2f7" font-size="14" font-weight="600">Write sleep data</text>
+      <text x="16" y="44" fill="#a9b4c0" font-size="11">Share nightly logs</text>
+      <rect x="206" y="16" width="40" height="24" rx="12" fill="url(#g3)"/>
+      <circle cx="234" cy="28" r="9" fill="#fff"/>
+    </g>
+    <g transform="translate(32,346)" font-family="system-ui,sans-serif">
+      <rect x="0" y="0" width="256" height="56" rx="14" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.10)"/>
+      <text x="16" y="26" fill="#eef2f7" font-size="14" font-weight="600">Read activity</text>
+      <text x="16" y="44" fill="#a9b4c0" font-size="11">For context only</text>
+      <rect x="206" y="16" width="40" height="24" rx="12" fill="rgba(255,255,255,.12)"/>
+      <circle cx="218" cy="28" r="9" fill="#fff"/>
+    </g>
+    <text x="32" y="442" fill="#a9b4c0" font-family="system-ui,sans-serif" font-size="11">You can revoke access anytime in the Health app.</text>
+  </g>
+</svg>
